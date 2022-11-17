@@ -1,5 +1,7 @@
 package Modelos;
 
+import java.io.Serializable;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -10,13 +12,13 @@ package Modelos;
  *
  * @author Kevin
  */
- public class Participante {
+ public class Participante implements Serializable{
      private String nombre;
      private String Apellidos;
-     private int carnetIdentidad;
+     private long carnetIdentidad;
      private int edad;
 
-    public Participante(String nombre, String Apellidos, int carnetIdentidad, int edad) {
+    public Participante(String nombre, String Apellidos, long carnetIdentidad, int edad) {
         this.nombre = nombre;
         this.Apellidos = Apellidos;
         this.carnetIdentidad = carnetIdentidad;
@@ -25,8 +27,8 @@ package Modelos;
 
     @Override
     public String toString() {
-        return "{" + "nombre=" + nombre + ", Apellidos=" + Apellidos +
-                ", carnetIdentidad=" + carnetIdentidad + ", edad=" + edad + '}';
+        return "{" + "nombre: " + nombre + ", Apellidos: " + Apellidos +
+                ", carnetIdentidad: " + carnetIdentidad + ", edad: " + edad + " }";
     }
 
     public String getNombre() {
@@ -45,11 +47,11 @@ package Modelos;
         this.Apellidos = Apellidos;
     }
 
-    public int getCarnetIdentidad() {
+    public long getCarnetIdentidad() {
         return carnetIdentidad;
     }
 
-    public void setCarnetIdentidad(int carnetIdentidad) {
+    public void setCarnetIdentidad(long carnetIdentidad) {
         this.carnetIdentidad = carnetIdentidad;
     }
 
@@ -61,11 +63,4 @@ package Modelos;
         this.edad = edad;
     }
 
-    public int getNumero() {
-        return numero;
-    }
-
-    public void setNumero(int numero) {
-        this.numero = numero;
-    }
 }

@@ -9,8 +9,8 @@ package Excepciones;
  *
  * @author Kevin
  */
-class ErrorPosicionNoValida extends Exception {
-    public ErrorPosicionNoValida(){
-        super("Ha introducido una posicion no valida.");
+ public class ErrorEntradaNoValida extends Exception {
+    public ErrorEntradaNoValida(){
+        super("Ha introducido opcion o posicion no valida.");
     }
 }
